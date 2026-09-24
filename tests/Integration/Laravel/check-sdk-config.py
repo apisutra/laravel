@@ -40,7 +40,8 @@ try:
         for cached in [False, True]:
             run('artisan', 'config:cache' if cached else 'config:clear')
             observed = json.loads(run('probe-sdk-config.php'))
-            expected = {'base_url': env['RECORDS_BASE_URL'], 'timeout': 17, 'has_auth': True, 'id': 7, 'extras': {'new_field': False}, 'cached': cached}
+            assert observed.pop('extras')['new_field'] is False, observed
+            expected = {'base_url': env['RECORDS_BASE_URL'], 'timeout': 17, 'has_auth': True, 'id': 7, 'cached': cached}
             assert observed == expected, (observed, expected)
             checks += 1
         changed = dict(env, RECORDS_BASE_URL='https://changed.example.test', RECORDS_TIMEOUT='23', RECORDS_TOKEN='')

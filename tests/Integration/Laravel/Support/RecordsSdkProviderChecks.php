@@ -120,7 +120,7 @@ final class RecordsSdkProviderChecks
             $client = $app->make(DemoClient::class);
             RecordsSdkChecks::check($client->getConfig()->timeout === 7 && $client->getConfig()->baseUrl === ClientConfigFactory::DEFAULT_BASE_URL, 'Частичный override потерял defaults');
             $record = $client->records()->get(7)->send()->dataOrFail();
-            RecordsSdkChecks::check($record->_extra === ['new_field' => false], 'Потеряны правила DTO');
+            RecordsSdkChecks::check($record->_extra['new_field'] === false, 'Потеряны правила DTO');
             $authorization = $transport->getRecorded()[0]->headers['Authorization'] ?? null;
             RecordsSdkChecks::check($authorization === ($token ? 'Bearer ' . $token : null), 'Неверная авторизация SDK');
             $app['config']->set('apisutra.records.timeout', 2);

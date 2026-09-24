@@ -6,8 +6,11 @@ namespace Integration;
 
 use ApiSutra\Contracts\Interfaces\Core\TransportInterface;
 use ApiSutra\Enums\Configuration\Environment;
+use ApiSutra\Serialization\Hydrator;
 use ApiSutra\Testing\MockResponse;
 use ApiSutra\Transport\MockTransport;
+use Composer\InstalledVersions;
+use Example\Records\Config\HydrationConfigFactory;
 use Example\Records\DemoClient;
 use Example\Records\Laravel\DemoServiceProvider;
 use Example\Records\Resources\Records\Get\GetRecordRequest;
@@ -20,7 +23,12 @@ final class RecordsSdkChecks
     /** @return array{data: array<string, mixed>} */
     public static function payload(): array
     {
-        return ['data' => ['record_id' => 7, 'title' => 'Laravel', 'created_at' => '2026-09-16T12:00:00+00:00', 'new_field' => false]];
+        $sdk = InstalledVersions::getInstallPath('example/records-sdk');
+        $payload = json_decode((string) file_get_contents($sdk . '/fixtures/record.json'), true, flags: JSON_THROW_ON_ERROR);
+        $payload['data']['title'] = 'Laravel';
+        $payload['data']['created_at'] = '2026-09-16T12:00:00+00:00';
+        $payload['data']['new_field'] = false;
+        return $payload;
     }
 
     public static function transport(): MockTransport
@@ -49,7 +57,11 @@ final class RecordsSdkChecks
         $demo = $app->make(DemoClient::class);
         self::check($request->getClient() === $demo, 'Запрос первым не получил клиент SDK');
         $record = $request->send()->dataOrFail();
-        self::check($record instanceof GetRecordResponseDto && $record->id === 7 && $record->_extra === ['new_field' => false], 'Потеряны DTO и правила SDK');
+        self::check($record instanceof GetRecordResponseDto && $record->id === 7 && $record->_extra['new_field'] === false, 'Потеряны DTO и правила SDK');
+        // Сравниваем граф с правилами установленной версии SDK, включая lowest в CI.
+        $expected = Hydrator::forConfig(HydrationConfigFactory::create())
+            ->hydrate(self::payload()['data'], GetRecordResponseDto::class);
+        self::check($record->toArray() === $expected->toArray(), 'Laravel изменил данные DTO SDK');
         self::check($record->createdAt->format('c') === '2026-09-16T12:00:00+00:00', 'Потеряна дата DTO SDK');
         self::check($demo->getConfig()->baseUrl === 'https://laravel.example.test/v2', 'Потерян URL SDK');
         self::check($demo->getConfig()->environment === Environment::Testing, 'Потеряно окружение Laravel');

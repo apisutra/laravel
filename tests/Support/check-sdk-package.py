@@ -113,7 +113,7 @@ return [SdkServiceProvider::class, DemoServiceProvider::class, ApplicationProvid
     package_manifest = (app / 'bootstrap/cache/packages.php').read_text()
     assert 'apisutra/laravel' not in package_manifest and 'apisutra/php' not in package_manifest and 'example/records-sdk' not in package_manifest, 'Discovery остался включён'
     observed = json.loads(run([PHP, 'probe-sdk-config.php'], app, environment))
-    assert observed['id'] == 7 and observed['extras'] == {'new_field': False}, observed
+    assert observed['id'] == 7 and observed['extras']['new_field'] is False, observed
     report['explicit_providers'] = 'passed'
 
 report['status'] = 'passed'
