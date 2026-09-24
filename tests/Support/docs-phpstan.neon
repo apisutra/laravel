@@ -1,0 +1,9 @@
+parameters:
+    level: 5
+    phpVersion: 80400
+    paths:
+        - ../../docs/example
+        - ../../.test/core/docs/example/sdk/src/Laravel
+    scanDirectories:
+        - ../../.test/core/docs/example/sdk/src
+    tmpDir: ../../.phpstan-cache/docs

@@ -1,0 +1,82 @@
+{
+    "name": "apisutra/laravel",
+    "description": "Laravel integration for declarative ApiSutra SDK clients",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "apisutra/php": "^0.1",
+        "illuminate/collections": "^13.12",
+        "illuminate/contracts": "^13.12",
+        "illuminate/http": "^13.12",
+        "illuminate/support": "^13.12",
+        "symfony/http-foundation": "^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.0",
+        "laravel/framework": "^13.12",
+        "laravel/telescope": "^5.0",
+        "pestphp/pest": "^3.8",
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ApiSutra\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApiSutra\\Laravel\\Tests\\Stubs\\": "tests/Stubs/",
+            "Acme\\Discovery\\": "tests/Fixtures/Acme/Discovery/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ApiSutra\\Laravel\\SdkServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:integration": "@composer test --working-dir=tests/Integration/Laravel",
+        "lint": "phpcs --report=summary",
+        "analyse": "phpstan analyse --no-progress --memory-limit=1G",
+        "analyse-docs": "phpstan analyse -c tests/Support/docs-phpstan.neon --no-progress --memory-limit=1G",
+        "check-docs": "python3 tests/Support/check-docs.py",
+        "check-package": "python3 tests/Support/check-package.py"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "archive": {
+        "exclude": [
+            "/vendor",
+            "/.test",
+            "/.agents",
+            "/AGENTS.md",
+            "/CONTRIBUTING.md",
+            "/docs/*/development",
+            "/tests",
+            "/.github",
+            "/.phpunit.cache",
+            "/.phpstan-cache",
+            "/.gitignore",
+            "/.gitattributes",
+            "/phpunit.xml.dist",
+            "/phpcs.xml",
+            "/phpstan.neon",
+            "/phpstan-baseline.neon",
+            "/.integration",
+            "/composer.local.json",
+            "/composer.local.lock"
+        ]
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "name": "apisutra/laravel-integration",
+    "type": "project",
+    "require": {
+        "php": "^8.4",
+        "laravel/framework": "^13.12",
+        "apisutra/php": "^0.1",
+        "example/records-sdk": "dev-main",
+        "apisutra/laravel": "^0.1"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../..",
+            "options": {
+                "symlink": true,
+                "versions": {
+                    "apisutra/laravel": "0.1.0"
+                }
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../../.test/core/docs/example/sdk",
+            "options": {
+                "symlink": true,
+                "versions": {
+                    "example/records-sdk": "dev-main"
+                }
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Integration\\": "Support/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan package:discover --ansi"
+        ],
+        "test": [
+            "@php verify.php",
+            "@php verify-sdk.php",
+            "python3 check-sdk-config.py"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "vendor-dir": "../../../.integration/vendor"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "description": "Isolated Laravel integration checks for ApiSutra",
+    "license": "proprietary"
+}

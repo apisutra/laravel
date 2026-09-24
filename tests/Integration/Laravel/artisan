@@ -1,0 +1,10 @@
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Component\Console\Input\ArgvInput;
+
+$vendor = require __DIR__ . '/bootstrap/vendor-path.php';
+require $vendor . '/autoload.php';
+$app = require __DIR__ . '/bootstrap/app.php';
+exit($app->handleCommand(new ArgvInput()));

@@ -1,0 +1,58 @@
+{
+  "declarations": [
+    {
+      "class": "ApiSutra\\Laravel\\Contracts\\RequestFactoryInterface",
+      "docs": [
+        "reference/integrations/laravel"
+      ]
+    },
+    {
+      "class": "ApiSutra\\Laravel\\Contracts\\ClientResponseAdapterInterface",
+      "docs": [
+        "reference/integrations/laravel"
+      ]
+    },
+    {
+      "class": "ApiSutra\\Laravel\\RequestFactory\\PayloadKeys",
+      "docs": [
+        "reference/integrations/laravel"
+      ]
+    },
+    {
+      "class": "ApiSutra\\Laravel\\ClientConfigFactory",
+      "docs": [
+        "reference/integrations/laravel"
+      ],
+      "methods": {
+        "make": {
+          "return": "ApiSutra\\Config\\ClientConfig",
+          "parameters": {
+            "overrides": {
+              "type": "array",
+              "optional": false,
+              "variadic": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "class": "ApiSutra\\Laravel\\Pagination",
+      "docs": [
+        "reference/integrations/pagination"
+      ],
+      "methods": {
+        "collect": {
+          "return": "Illuminate\\Support\\LazyCollection",
+          "parameters": {
+            "paginator": {
+              "type": "ApiSutra\\Pagination\\Paginator",
+              "optional": false,
+              "variadic": false
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+name: Tests
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    name: Laravel 13 / PHP ${{ matrix.php }} / ${{ matrix.dependencies }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {php: '8.4', dependencies: locked}
+          - {php: '8.5', dependencies: locked}
+          - {php: '8.4', dependencies: lowest}
+          - {php: '8.5', dependencies: latest}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: curl, dom, fileinfo, intl, mbstring, xml, xmlwriter
+          coverage: none
+          tools: composer:v2
+      - run: python3 tests/Support/test-install.py
+      - name: Require reproducible locks
+        if: matrix.dependencies == 'locked'
+        run: test -f composer.lock && test -f tests/Integration/Laravel/composer.lock
+      - run: python3 tests/Support/install.py --dependencies ${{ matrix.dependencies }}
+      - run: composer test -- --fail-on-warning
+      - run: composer test:integration
+      - name: Quality and distribution
+        if: matrix.php == '8.4' && matrix.dependencies == 'locked'
+        run: |
+          composer validate --strict
+          composer dump-autoload --optimize --strict-psr
+          composer lint
+          composer analyse
+          composer check-docs
+          composer analyse-docs
+          composer check-package
+  redis-wiring:
+    name: Optional Laravel Redis wiring
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      redis:
+        image: redis:7.0-alpine
+        ports: ['6379:6379']
+        options: >-
+          --health-cmd "redis-cli ping" --health-interval 5s
+          --health-timeout 3s --health-retries 10
+    env:
+      APISUTRA_TEST_REDIS: '1'
+      APISUTRA_REDIS_HOST: '127.0.0.1'
+      APISUTRA_REDIS_PORT: '6379'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: curl, dom, fileinfo, intl, mbstring, xml, xmlwriter, redis-6.2.0
+          coverage: none
+          tools: composer:v2
+      - run: python3 tests/Support/install.py
+      - run: composer test:integration

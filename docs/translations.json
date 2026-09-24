@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "default_language": "en",
+  "languages": {
+    "en": {
+      "label": "English",
+      "required": true
+    },
+    "ru": {
+      "label": "Русский",
+      "required": true
+    }
+  },
+  "pages": [
+    {
+      "id": "glossary/laravel",
+      "kind": "glossary",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/glossary/laravel.md",
+        "ru": "docs/ru/glossary/laravel.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "b8cfc822f81a20728ebe8649957738ae8c88397eff5ae677e6d98636f8cf5020",
+          "translation_sha256": "b7c398c456eb4760ed25e8947e1d13cfc43a4c24de0791af42ea157ed202b71d"
+        }
+      }
+    },
+    {
+      "id": "guides/integration/laravel",
+      "kind": "guide",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/guides/integration/laravel.md",
+        "ru": "docs/ru/guides/integration/laravel.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "cd32a0db1f4b8a34c51909b6d4af69eb255e77052388959046dad9f16fcd6d25",
+          "translation_sha256": "ead36f09f4de5ed029de0aec2c015e84b3138eae6d3ac2ef2c5b48e2d1539d52"
+        }
+      }
+    },
+    {
+      "id": "guides/sdk/laravel",
+      "kind": "guide",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/guides/sdk/laravel.md",
+        "ru": "docs/ru/guides/sdk/laravel.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "fbf85676b274d7d3c4479a977622757f9e5402fe4d6377e7dd3d328c5b5d7421",
+          "translation_sha256": "5574540cd1c63ff8e388053827e7294a320f62ef50402c34fe49a0b0cfd46b48"
+        }
+      }
+    },
+    {
+      "id": "reference/integrations/laravel",
+      "kind": "reference",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/reference/integrations/laravel.md",
+        "ru": "docs/ru/reference/integrations/laravel.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "0a8f9edb8f18cccf434338f3f15ef77686093a68d21fe16f57d3a6280c5c617b",
+          "translation_sha256": "1ac59bb035ab254880d91b1c82f880609bcd011375115f6fba960dcf3ebb4183"
+        }
+      }
+    },
+    {
+      "id": "overview",
+      "kind": "overview",
+      "scope": "public",
+      "paths": {
+        "en": "README.md",
+        "ru": "docs/ru/overview.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "e311cda02bb7617bbf9a5505f7a2d3f6a4b20c51011a489a798c162325c1ff12",
+          "translation_sha256": "300068299d2331e3c843c9f54b4bc9c195d40a3ed0033d326c28980cfff3cba4"
+        }
+      }
+    },
+    {
+      "id": "README",
+      "kind": "index",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/README.md",
+        "ru": "docs/ru/README.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "85020e131cb24fb948b51e40ba8fbb1cc053612a51a880bd2fbfe91e2f87e23a",
+          "translation_sha256": "2c5178056599bc71c9d60dc44e6675188a0a02c53acadb9c7569841e973cc092"
+        }
+      }
+    },
+    {
+      "id": "changelog",
+      "kind": "changelog",
+      "scope": "public",
+      "paths": {
+        "en": "CHANGELOG.md",
+        "ru": "docs/ru/changelog.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "258c5ffe668625f1c3e88943f9d913835f1c37d6a9cdc110fc4d1df1ef65f0ad",
+          "translation_sha256": "56b7adb09cc70c12c4047a87731075169b40f81cafac8b4c93318b0a908ef723"
+        }
+      }
+    },
+    {
+      "id": "development/testing",
+      "kind": "development",
+      "scope": "development",
+      "paths": {
+        "en": "docs/en/development/testing.md",
+        "ru": "docs/ru/development/testing.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "69e96183e406014299a00f0c03a1a3fcaddc272cb24e4b3077ea9bf44cb8ce0c",
+          "translation_sha256": "49ef47176a2e60f61cca0d33bc9bb591a8d77e2bdd4e8f5b4c2d256a5b0f4040"
+        }
+      }
+    },
+    {
+      "id": "development/contributing",
+      "kind": "development",
+      "scope": "development",
+      "paths": {
+        "en": "CONTRIBUTING.md",
+        "ru": "docs/ru/development/contributing.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "911c7d7dd9d1e13f7f913837f2f5edb1eb809a671156181cc6b4a43a60653a9b",
+          "translation_sha256": "7e77eba82a5185ed224fa4eb63c2b718bd2ecfcc933501f031f6ae2538eae2c5"
+        }
+      }
+    },
+    {
+      "id": "guides/integration/oauth2",
+      "kind": "guide",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/guides/integration/oauth2.md",
+        "ru": "docs/ru/guides/integration/oauth2.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "d122c67661660ea9fb71e4bd0db7b309781c74500a8b10757a23c61e8d69e442",
+          "translation_sha256": "20e47be6f35fea9918ac2d7e031ab4216a7635b5ff8c522073ae73479cfc615e"
+        }
+      }
+    },
+    {
+      "id": "reference/integrations/cooldown",
+      "kind": "reference",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/reference/integrations/cooldown.md",
+        "ru": "docs/ru/reference/integrations/cooldown.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "b05ba125de3ddebdb08c4048fd63432cb5a985587849adfab30b11ade8611f48",
+          "translation_sha256": "d94dfca9ab922cc4631d4f3cb09fb726db7b360eaf30fd3e3b138456f964014b"
+        }
+      }
+    },
+    {
+      "id": "reference/integrations/pagination",
+      "kind": "reference",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/reference/integrations/pagination.md",
+        "ru": "docs/ru/reference/integrations/pagination.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "8993299318e4ca9c0e9ab697174ccc5b285df40768679f713dd216e2109dbb8d",
+          "translation_sha256": "48c0a9adb3a4db318cee795c23eff5337682623cb39e97bb7279d76295618355"
+        }
+      }
+    },
+    {
+      "id": "reference/integrations/testing",
+      "kind": "reference",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/reference/integrations/testing.md",
+        "ru": "docs/ru/reference/integrations/testing.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "e24ce1a59bf784e5280444f586d5ca9e6dd3db7835dbe9813ea396396108cc5e",
+          "translation_sha256": "cc5b0d5383b5c7ecdab678e84668107eab22d3eb0b8e59698de5dd5efa2d90e4"
+        }
+      }
+    },
+    {
+      "id": "reference/integrations/observability",
+      "kind": "reference",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/reference/integrations/observability.md",
+        "ru": "docs/ru/reference/integrations/observability.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "0b004b74b55459995f93b3c758c6526a07d4a62400998438e6c1f798c3d884f0",
+          "translation_sha256": "6e348c8332fb2affad3c6a869c27b78d3b612587ad6d76cc6f7af436a9d56242"
+        }
+      }
+    },
+    {
+      "id": "reference/integrations/queue",
+      "kind": "reference",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/reference/integrations/queue.md",
+        "ru": "docs/ru/reference/integrations/queue.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "54e4b42d10344390e5012da8cd4dd3d132b3fcac0ecde1cb41770c4889c3439a",
+          "translation_sha256": "1762fe67f20fc2db49d6d55d0f913029b94559e485fa1375fbd1c685e85c819d"
+        }
+      }
+    },
+    {
+      "id": "reference/integrations/generation",
+      "kind": "reference",
+      "scope": "public",
+      "paths": {
+        "en": "docs/en/reference/integrations/generation.md",
+        "ru": "docs/ru/reference/integrations/generation.md"
+      },
+      "reviewed": {
+        "ru": {
+          "source_sha256": "3a694f103484bc722d3bc8db899506dc8594e2b123a79bd89e17ae71b1490b0f",
+          "translation_sha256": "b1c5df8230074b5c500a179cd645a456e2829cae8d3252e29dcb80952f77c57a"
+        }
+      }
+    }
+  ]
+}

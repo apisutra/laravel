@@ -1,0 +1,11 @@
+/vendor/
+/.test/
+/.phpunit.cache/
+/.phpstan-cache/
+/tests/Integration/Laravel/vendor/
+/tests/Integration/Laravel/bootstrap/cache/
+/tests/Integration/Laravel/storage/
+__pycache__/
+/.integration/
+composer.local.json
+composer.local.lock
