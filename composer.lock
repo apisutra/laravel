@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fa1d1dd15f3f3a2e8f97dc8d76a0a24",
+    "content-hash": "0c637862b8efc740773a80cdc4a81888",
     "packages": [
         {
             "name": "apisutra/php",

@@ -1,6 +1,14 @@
 <!-- languages --> <a href="../../CHANGELOG.md">English</a> · <a href="changelog.md">Русский</a> <!-- /languages -->
 # История изменений <a id="section-1"></a>
 
+## 0.1.1
+
+- Добавлена совместимость с ApiSutra PHP 0.2 при сохранении поддержки 0.1.
+  API Laravel-интеграции не изменён.
+- Ядро 0.2 включает проверку JSON-контейнеров по умолчанию. При обновлении SDK
+  учитывайте [изменения совместимости ядра](https://github.com/apisutra/php/releases/tag/v0.2.0);
+  гидратация настраивается через ClientConfig.
+
 ## 0.1.0
 
 Первый выпуск интеграции Laravel 13.12+ с ApiSutra PHP 0.1; требуется PHP 8.4+.

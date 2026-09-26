@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5f1761b95bbba8cf2606893a46f3eb9",
+    "content-hash": "6c372737a204a5316d03076a06b95e09",
     "packages": [
         {
             "name": "apisutra/laravel",
@@ -12,10 +12,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../..",
-                "reference": "de5ae23d03fb0b4ad1887299c1a7054934580420"
+                "reference": "c834c608f1a3cb60514f73b40d7375360937c31b"
             },
             "require": {
-                "apisutra/php": "^0.1",
+                "apisutra/php": "^0.1 || ^0.2",
                 "illuminate/collections": "^13.12",
                 "illuminate/contracts": "^13.12",
                 "illuminate/http": "^13.12",
@@ -739,10 +739,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../../.test/core/docs/example/sdk",
-                "reference": "bb70dd264fffcfc4fa4823a8cb2bc124f8d93f4a"
+                "reference": "12ebcd5a36348986ea89cb4bc69cc84b39ca7125"
             },
             "require": {
-                "apisutra/php": "^0.1",
+                "apisutra/php": "^0.1 || ^0.2",
                 "php": "^8.4"
             },
             "suggest": {

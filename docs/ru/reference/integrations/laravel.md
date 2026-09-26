@@ -1,7 +1,7 @@
 <!-- languages --> <a href="../../../en/reference/integrations/laravel.md">English</a> · <a href="laravel.md">Русский</a> <!-- /languages -->
 # Интеграция с Laravel <a id="section-1"></a>
 
-Требуются Laravel 13.12+, PHP 8.4+ и `apisutra/php:^0.1`. Установите `apisutra/laravel`: он подключается через package discovery. Обязательных config-файла и публикации нет.
+Требуются Laravel 13.12+, PHP 8.4+ и `apisutra/php:^0.1 || ^0.2`. Установите `apisutra/laravel`: он подключается через package discovery. Обязательных config-файла и публикации нет.
 
 Пакет поставляется с `SdkServiceProvider`, который подключает DI,
 auto-discovery, RequestFactory и адаптер ответов. В Laravel provider подключается

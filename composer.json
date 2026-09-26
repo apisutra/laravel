@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.4",
-        "apisutra/php": "^0.1",
+        "apisutra/php": "^0.1 || ^0.2",
         "illuminate/collections": "^13.12",
         "illuminate/contracts": "^13.12",
         "illuminate/http": "^13.12",

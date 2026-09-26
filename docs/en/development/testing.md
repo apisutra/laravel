@@ -44,7 +44,7 @@ dependency declarations; local manifests are regenerated from the main manifests
 Without `--core`, the installer uses Packagist for the core in both environments,
 even when local files or a previous `.test/core` symlink exist. Ordinary
 `composer install` also uses the main manifest without requiring a core checkout.
-Both require a published core compatible with `^0.1`. The full installer additionally
+Both require a published core compatible with `^0.1 || ^0.2`. The full installer additionally
 fetches the resolved core revision into `.test/core-source` for docs, examples and
 distribution checks, and points `.test/core` there; it does not override the runtime
 dependency. These directories are ignored and excluded from archives. The integration

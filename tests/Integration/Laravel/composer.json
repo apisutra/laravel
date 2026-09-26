@@ -4,7 +4,7 @@
     "require": {
         "php": "^8.4",
         "laravel/framework": "^13.12",
-        "apisutra/php": "^0.1",
+        "apisutra/php": "^0.1 || ^0.2",
         "example/records-sdk": "dev-main",
         "apisutra/laravel": "^0.1"
     },
