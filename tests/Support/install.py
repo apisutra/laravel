@@ -33,7 +33,7 @@ def local_manifest(directory, core_url):
     data = json.loads((directory / 'composer.json').read_text())
     repository = {
         'type': 'path', 'url': core_url,
-        'options': {'symlink': True, 'versions': {'apisutra/php': '0.1.0'}},
+        'options': {'symlink': True, 'versions': {'apisutra/php': '0.3.0'}},
     }
     data['repositories'] = [repository, *data.get('repositories', [])]
     (directory / 'composer.local.json').write_text(json.dumps(data, indent=4) + '\n')

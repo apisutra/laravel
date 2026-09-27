@@ -1,6 +1,15 @@
 <!-- languages --> <a href="CHANGELOG.md">English</a> · <a href="docs/ru/changelog.md">Русский</a> <!-- /languages -->
 # Changelog <a id="section-1"></a>
 
+## 0.1.2
+
+- Allow ApiSutra PHP 0.3 alongside 0.1 and 0.2. Laravel integration APIs are unchanged.
+- Document the core's public JSON hydration entry for webhooks and shared DTO variants.
+  These features require PHP core 0.3; review its
+  [upgrade notes](https://github.com/apisutra/php/releases/tag/v0.3.0) for enum renames
+  and stricter discriminator values.
+- Align the runnable SDK installation checks with its PHP core 0.3 requirement.
+
 ## 0.1.1
 
 - Allow ApiSutra PHP 0.2 alongside 0.1. Laravel integration APIs are unchanged.

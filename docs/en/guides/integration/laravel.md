@@ -15,7 +15,7 @@ Install the integration into a Laravel 13 application (PHP 8.4+):
 composer require apisutra/laravel:^0.1
 ```
 
-This also installs `apisutra/php:^0.1`. The sample SDK needs this explicit installation
+This also installs a compatible `apisutra/php` version; the current sample SDK requires `^0.3`. The sample SDK needs this explicit installation
 for its automatic Laravel client/request DI. Without the adapter, explicit construction
 still works; see the [three environments](https://github.com/apisutra/php/blob/master/docs/en/examples/sdk.md#environments).
 
@@ -121,3 +121,8 @@ FrankenPHP worker mode or platform-specific loop adapters.
 Use [isolated fakes](../../reference/integrations/testing.md) in tests and
 [execution events](../../reference/integrations/observability.md) for observation.
 Repeatable jobs can opt into [throttle middleware](../../reference/integrations/queue.md).
+
+For an incoming webhook, pass the original request body to the core’s
+[JSON → DTO entry](https://github.com/apisutra/php/blob/master/docs/en/reference/dto/configuration.md#json-input).
+Reuse the SDK’s HydrationConfig explicitly; Laravel adds no separate decoder or
+variant registry. [Type-level variants and fallback](https://github.com/apisutra/php/blob/master/docs/en/reference/dto/variants.md) belong to the core.

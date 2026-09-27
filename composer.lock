@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c637862b8efc740773a80cdc4a81888",
+    "content-hash": "9f468d1cee757f75495f328a74c50cc7",
     "packages": [
         {
             "name": "apisutra/php",
-            "version": "v0.1.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apisutra/php.git",
-                "reference": "7ed681fbb944468939f2e9685076754df9188e35"
+                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apisutra/php/zipball/7ed681fbb944468939f2e9685076754df9188e35",
-                "reference": "7ed681fbb944468939f2e9685076754df9188e35",
+                "url": "https://api.github.com/repos/apisutra/php/zipball/ebabb85b1c30225a0f6392978c464e61914f7446",
+                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446",
                 "shasum": ""
             },
             "require": {
@@ -58,75 +58,16 @@
                     "src/Testing"
                 ]
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "ApiSutra\\Tests\\Stubs\\": "tests/Stubs/",
-                    "ApiSutra\\Tests\\Support\\": "tests/Support/",
-                    "Acme\\Blank\\": "tests/Fixtures/Acme/Blank/",
-                    "Acme\\Discovery\\": "tests/Fixtures/Acme/Discovery/",
-                    "Acme\\Fallback\\": "tests/Fixtures/Acme/Fallback/"
-                }
-            },
-            "archive": {
-                "exclude": [
-                    "/vendor",
-                    "/.laravel-integration",
-                    "/.agents",
-                    "/AGENTS.md",
-                    "/CONTRIBUTING.md",
-                    "/docs/*/development",
-                    "/tests",
-                    "/.github",
-                    "/.phpunit.cache",
-                    "/.phpunit.result.cache",
-                    "/.phpstan-cache",
-                    "/.idea",
-                    "/.temp",
-                    "/.gitignore",
-                    "/.gitattributes",
-                    "/phpunit.xml.dist",
-                    "/phpcs.xml",
-                    "/phpstan.neon",
-                    "/phpstan-baseline.neon",
-                    "/phpstan-stubs"
-                ]
-            },
-            "scripts": {
-                "test": [
-                    "pest"
-                ],
-                "test:redis": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "sh tests/Support/test-redis.sh"
-                ],
-                "lint": [
-                    "phpcs --report=summary"
-                ],
-                "analyse": [
-                    "phpstan analyse --no-progress --memory-limit=1G",
-                    "phpstan analyse -c tests/Support/async-phpstan.neon --no-progress --memory-limit=1G"
-                ],
-                "analyse-docs": [
-                    "phpstan analyse -c tests/Support/docs-phpstan.neon --no-progress --memory-limit=1G"
-                ],
-                "check-docs": [
-                    "python3 tests/Support/check-docs.py",
-                    "python3 tests/Support/test-check-docs.py",
-                    "python3 tests/Support/test-doc-translations.py"
-                ],
-                "check-package": [
-                    "python3 tests/Support/check-package.py"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "API Core SDK for declarative API clients",
             "support": {
-                "source": "https://github.com/apisutra/php/tree/v0.1.0",
-                "issues": "https://github.com/apisutra/php/issues"
+                "issues": "https://github.com/apisutra/php/issues",
+                "source": "https://github.com/apisutra/php/tree/v0.3.0"
             },
-            "time": "2026-09-24T18:32:14+00:00"
+            "time": "2026-09-27T10:25:11+00:00"
         },
         {
             "name": "brick/math",

@@ -15,7 +15,7 @@
 composer require apisutra/laravel:^0.1
 ```
 
-Команда устанавливает также `apisutra/php:^0.1`. Адаптер нужен для автоматического DI
+Команда устанавливает также совместимую версию `apisutra/php`; текущий учебный SDK требует `^0.3`. Адаптер нужен для автоматического DI
 клиента/запроса учебного SDK в Laravel. Без него явная сборка остаётся доступна:
 см. [три окружения](https://github.com/apisutra/php/blob/master/docs/ru/examples/sdk.md#environments).
 
@@ -121,3 +121,8 @@ Swoole, worker-режим FrankenPHP или платформенные адап�
 Для тестов используйте [изолированный fake](../../reference/integrations/testing.md);
 для диагностики — [события исполнения](../../reference/integrations/observability.md).
 Повторяемые jobs могут подключить [middleware ограничения](../../reference/integrations/queue.md).
+
+Для входящего webhook передавайте исходное тело запроса в
+[JSON → DTO вход ядра](https://github.com/apisutra/php/blob/master/docs/ru/reference/dto/configuration.md#json-input).
+Явно переиспользуйте HydrationConfig SDK; Laravel не добавляет отдельный decoder
+или registry вариантов. [Варианты типа и fallback](https://github.com/apisutra/php/blob/master/docs/ru/reference/dto/variants.md) принадлежат ядру.

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c372737a204a5316d03076a06b95e09",
+    "content-hash": "10a077e6fdc331280eb4974a0aca2117",
     "packages": [
         {
             "name": "apisutra/laravel",
@@ -12,10 +12,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../..",
-                "reference": "c834c608f1a3cb60514f73b40d7375360937c31b"
+                "reference": "679170ee9f65facec07416cde0ff3a197973a9f0"
             },
             "require": {
-                "apisutra/php": "^0.1 || ^0.2",
+                "apisutra/php": "^0.1 || ^0.2 || ^0.3",
                 "illuminate/collections": "^13.12",
                 "illuminate/contracts": "^13.12",
                 "illuminate/http": "^13.12",
@@ -107,16 +107,16 @@
         },
         {
             "name": "apisutra/php",
-            "version": "v0.1.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apisutra/php.git",
-                "reference": "7ed681fbb944468939f2e9685076754df9188e35"
+                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apisutra/php/zipball/7ed681fbb944468939f2e9685076754df9188e35",
-                "reference": "7ed681fbb944468939f2e9685076754df9188e35",
+                "url": "https://api.github.com/repos/apisutra/php/zipball/ebabb85b1c30225a0f6392978c464e61914f7446",
+                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446",
                 "shasum": ""
             },
             "require": {
@@ -157,75 +157,16 @@
                     "src/Testing"
                 ]
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "ApiSutra\\Tests\\Stubs\\": "tests/Stubs/",
-                    "ApiSutra\\Tests\\Support\\": "tests/Support/",
-                    "Acme\\Blank\\": "tests/Fixtures/Acme/Blank/",
-                    "Acme\\Discovery\\": "tests/Fixtures/Acme/Discovery/",
-                    "Acme\\Fallback\\": "tests/Fixtures/Acme/Fallback/"
-                }
-            },
-            "archive": {
-                "exclude": [
-                    "/vendor",
-                    "/.laravel-integration",
-                    "/.agents",
-                    "/AGENTS.md",
-                    "/CONTRIBUTING.md",
-                    "/docs/*/development",
-                    "/tests",
-                    "/.github",
-                    "/.phpunit.cache",
-                    "/.phpunit.result.cache",
-                    "/.phpstan-cache",
-                    "/.idea",
-                    "/.temp",
-                    "/.gitignore",
-                    "/.gitattributes",
-                    "/phpunit.xml.dist",
-                    "/phpcs.xml",
-                    "/phpstan.neon",
-                    "/phpstan-baseline.neon",
-                    "/phpstan-stubs"
-                ]
-            },
-            "scripts": {
-                "test": [
-                    "pest"
-                ],
-                "test:redis": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "sh tests/Support/test-redis.sh"
-                ],
-                "lint": [
-                    "phpcs --report=summary"
-                ],
-                "analyse": [
-                    "phpstan analyse --no-progress --memory-limit=1G",
-                    "phpstan analyse -c tests/Support/async-phpstan.neon --no-progress --memory-limit=1G"
-                ],
-                "analyse-docs": [
-                    "phpstan analyse -c tests/Support/docs-phpstan.neon --no-progress --memory-limit=1G"
-                ],
-                "check-docs": [
-                    "python3 tests/Support/check-docs.py",
-                    "python3 tests/Support/test-check-docs.py",
-                    "python3 tests/Support/test-doc-translations.py"
-                ],
-                "check-package": [
-                    "python3 tests/Support/check-package.py"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "API Core SDK for declarative API clients",
             "support": {
-                "source": "https://github.com/apisutra/php/tree/v0.1.0",
-                "issues": "https://github.com/apisutra/php/issues"
+                "issues": "https://github.com/apisutra/php/issues",
+                "source": "https://github.com/apisutra/php/tree/v0.3.0"
             },
-            "time": "2026-09-24T18:32:14+00:00"
+            "time": "2026-09-27T10:25:11+00:00"
         },
         {
             "name": "brick/math",
@@ -739,10 +680,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../../.test/core/docs/example/sdk",
-                "reference": "12ebcd5a36348986ea89cb4bc69cc84b39ca7125"
+                "reference": "14856df132afe8e147e4cabb97c50afcf805bd06"
             },
             "require": {
-                "apisutra/php": "^0.1 || ^0.2",
+                "apisutra/php": "^0.3",
                 "php": "^8.4"
             },
             "suggest": {

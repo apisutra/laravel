@@ -27,7 +27,7 @@ class InstallationModesTest(unittest.TestCase):
         source_file.write_text('unchanged source')
         for directory in [self.root, self.application]:
             (directory / 'composer.json').write_text(json.dumps({
-                'name': 'fixture/package', 'require': {'apisutra/php': '^0.1'},
+                'name': 'fixture/package', 'require': {'apisutra/php': '^0.3'},
                 'repositories': [{'type': 'path', 'url': 'sdk-fixture'}] if directory == self.application else [],
             }))
             (directory / 'composer.lock').write_text('original lock')
@@ -45,7 +45,7 @@ class InstallationModesTest(unittest.TestCase):
         self.assertEqual(self.source, (self.root / '.test/core').resolve())
         for directory in [self.root, self.application]:
             local = json.loads((directory / 'composer.local.json').read_text())
-            self.assertEqual('0.1.0', local['repositories'][0]['options']['versions']['apisutra/php'])
+            self.assertEqual('0.3.0', local['repositories'][0]['options']['versions']['apisutra/php'])
             self.assertEqual(self.source, (directory / local['repositories'][0]['url']).resolve())
         for path, content in originals.items():
             self.assertEqual(content, path.read_bytes())
