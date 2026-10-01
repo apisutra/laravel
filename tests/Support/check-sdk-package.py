@@ -57,7 +57,7 @@ with tempfile.TemporaryDirectory(prefix='apisutra-sdk-install-') as temporary:
     minimal.mkdir()
     (minimal / 'composer.json').write_text(json.dumps({
         'require': {'apisutra/laravel': '^0.1'},
-        'repositories': [repository(core, 'apisutra/php', '0.3.0'), repository(adapter, 'apisutra/laravel', '0.1.0')],
+        'repositories': [repository(core, 'apisutra/php', '0.4.0'), repository(adapter, 'apisutra/laravel', '0.1.0')],
         'config': {'allow-plugins': False},
     }, indent=2) + '\n')
     environment = dict(os.environ, COMPOSER='composer.json')
@@ -69,7 +69,7 @@ with tempfile.TemporaryDirectory(prefix='apisutra-sdk-install-') as temporary:
     plain = folder / 'laravel-without-adapter'
     manifest, environment = application(plain)
     del manifest['require']['apisutra/laravel']
-    manifest['repositories'] = [repository(sdk, 'example/records-sdk', 'dev-main'), repository(core, 'apisutra/php', '0.3.0')]
+    manifest['repositories'] = [repository(sdk, 'example/records-sdk', 'dev-main'), repository(core, 'apisutra/php', '0.4.0')]
     (plain / 'composer.json').write_text(json.dumps(manifest, indent=2) + '\n')
     (plain / 'bootstrap/providers.php').write_text('<?php\n\nreturn [];\n')
     (plain / 'routes/web.php').write_text('<?php\n')
@@ -84,7 +84,7 @@ with tempfile.TemporaryDirectory(prefix='apisutra-sdk-install-') as temporary:
 
     app = folder / 'laravel'
     manifest, environment = application(app)
-    manifest['repositories'] = [repository(sdk, 'example/records-sdk', 'dev-main'), repository(core, 'apisutra/php', '0.3.0'), repository(adapter, 'apisutra/laravel', '0.1.0')]
+    manifest['repositories'] = [repository(sdk, 'example/records-sdk', 'dev-main'), repository(core, 'apisutra/php', '0.4.0'), repository(adapter, 'apisutra/laravel', '0.1.0')]
     (app / 'composer.json').write_text(json.dumps(manifest, indent=2) + '\n')
     print('SDK: Laravel install and package discovery', flush=True)
     # Сохраняем зависимости публичного lock; без него выполняем первичное разрешение.

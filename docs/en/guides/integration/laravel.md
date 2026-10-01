@@ -15,7 +15,7 @@ Install the integration into a Laravel 13 application (PHP 8.4+):
 composer require apisutra/laravel:^0.1
 ```
 
-This also installs a compatible `apisutra/php` version; the current sample SDK requires `^0.3`. The sample SDK needs this explicit installation
+This also installs a compatible `apisutra/php` version; the current sample SDK requires `^0.3 || ^0.4`. The sample SDK needs this explicit installation
 for its automatic Laravel client/request DI. Without the adapter, explicit construction
 still works; see the [three environments](https://github.com/apisutra/php/blob/master/docs/en/examples/sdk.md#environments).
 

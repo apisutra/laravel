@@ -37,14 +37,14 @@ The installer generates ignored `composer.local.json` files beside both main man
 and selects them through Composer's `COMPOSER` environment variable. Their locks are
 `composer.local.lock`; main manifests and locks remain unchanged. `.test/core` points
 to the selected source and Composer symlinks it into vendor. Changes are immediately
-available. The local fixture version is 0.3.0; this does not publish or tag the core.
+available. The local fixture version is 0.4.0; this does not publish or tag the core.
 Repeat `--core` on subsequent runs. Use `--dependencies latest` to resolve changed
 dependency declarations; local manifests are regenerated from the main manifests.
 
 Without `--core`, the installer uses Packagist for the core in both environments,
 even when local files or a previous `.test/core` symlink exist. Ordinary
 `composer install` also uses the main manifest without requiring a core checkout.
-Both require a published core compatible with `^0.1 || ^0.2 || ^0.3`. The full installer additionally
+Both require a published core compatible with `^0.1 || ^0.2 || ^0.3 || ^0.4`. The full installer additionally
 fetches the resolved core revision into `.test/core-source` for docs, examples and
 distribution checks, and points `.test/core` there; it does not override the runtime
 dependency. These directories are ignored and excluded from archives. The integration

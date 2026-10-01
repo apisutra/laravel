@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10a077e6fdc331280eb4974a0aca2117",
+    "content-hash": "3443aa3cbe7167caa9076b0d81ed11dc",
     "packages": [
         {
             "name": "apisutra/laravel",
@@ -12,10 +12,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../..",
-                "reference": "679170ee9f65facec07416cde0ff3a197973a9f0"
+                "reference": "aba461f1c3979c3af7243e1e836c6b5de5c3534c"
             },
             "require": {
-                "apisutra/php": "^0.1 || ^0.2 || ^0.3",
+                "apisutra/php": "^0.1 || ^0.2 || ^0.3 || ^0.4",
                 "illuminate/collections": "^13.12",
                 "illuminate/contracts": "^13.12",
                 "illuminate/http": "^13.12",
@@ -107,16 +107,16 @@
         },
         {
             "name": "apisutra/php",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apisutra/php.git",
-                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446"
+                "reference": "15898e2db451270c22a8fa981a5b61cac135befe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apisutra/php/zipball/ebabb85b1c30225a0f6392978c464e61914f7446",
-                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446",
+                "url": "https://api.github.com/repos/apisutra/php/zipball/15898e2db451270c22a8fa981a5b61cac135befe",
+                "reference": "15898e2db451270c22a8fa981a5b61cac135befe",
                 "shasum": ""
             },
             "require": {
@@ -164,9 +164,9 @@
             "description": "API Core SDK for declarative API clients",
             "support": {
                 "issues": "https://github.com/apisutra/php/issues",
-                "source": "https://github.com/apisutra/php/tree/v0.3.0"
+                "source": "https://github.com/apisutra/php/tree/v0.4.0"
             },
-            "time": "2026-09-27T10:25:11+00:00"
+            "time": "2026-10-01T11:46:29+00:00"
         },
         {
             "name": "brick/math",
@@ -680,10 +680,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../../.test/core/docs/example/sdk",
-                "reference": "14856df132afe8e147e4cabb97c50afcf805bd06"
+                "reference": "26b624c80c4c4c9655ee35497e9fff13549e9f50"
             },
             "require": {
-                "apisutra/php": "^0.3",
+                "apisutra/php": "^0.3 || ^0.4",
                 "php": "^8.4"
             },
             "suggest": {

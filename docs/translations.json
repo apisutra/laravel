@@ -37,8 +37,8 @@
       },
       "reviewed": {
         "ru": {
-          "source_sha256": "5fc2da8db58fd12b5ea8b8d4913c4b4c723593efdf49ea93cac306681ca423ee",
-          "translation_sha256": "0a0c6ba0a467346536496be40ae8e8a73c71171156bc92615e2aff8dc78b1d8b"
+          "source_sha256": "c5dd32e28830e3811fdb4763c7cc2d05cefba2a6d53272249a0bf31a32c9bdbc",
+          "translation_sha256": "aaa62cfeb7b5c00e7fab23ae81254237c55205197e526f104799f78cf0d5355e"
         }
       }
     },
@@ -67,8 +67,8 @@
       },
       "reviewed": {
         "ru": {
-          "source_sha256": "b3ec545374c8317867acfeb72e8b4eb4907f7290302755fffcef272527e4e368",
-          "translation_sha256": "bc35c1b466d0f3d87f2162609cacf3dbf9825e717adfcabf055eff58b5f9c3ae"
+          "source_sha256": "8c2d1900c7ae9098f30d227dc17eefc0bcdaa2b9b854c874d8083078b461535c",
+          "translation_sha256": "c738588cbd78ea9e0a82ffe0547acad747743229f88e56e58d5454d278acbead"
         }
       }
     },
@@ -112,8 +112,8 @@
       },
       "reviewed": {
         "ru": {
-          "source_sha256": "8430a3165e1c64c689ee2cf140ae14f78b8e22360e26e4acfb3e9858441a05af",
-          "translation_sha256": "51f807e4e4b735b4ca5fc8c04a22645c77bd0a28549ece3083bf8ef43408744f"
+          "source_sha256": "f42275db6d04f6aa23cca9e7e5373d853713a19cd2a88f3782420706674ebcaf",
+          "translation_sha256": "503060cc831dd9198c431e82268543d4b4351cb0c8c0a290785c36ae881dcfb7"
         }
       }
     },
@@ -127,8 +127,8 @@
       },
       "reviewed": {
         "ru": {
-          "source_sha256": "85d40a089c537c221c62caa1b74172cdaa04138f3186affdabe913174f0c1893",
-          "translation_sha256": "af22ffb2fb0361d9358ff3f3b4f6e8df87de54ab622f420df6efaa816d16cd4a"
+          "source_sha256": "ea1e75a2dd65a38d781bc7a42a2d19702ed1d0c8402a2beabc6fa5fb37b1f171",
+          "translation_sha256": "8de2d44e2c66f9cf79493bffb5939261a45ce9f807c11ffa49620c45d9cf9f17"
         }
       }
     },

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use ApiSutra\Config\ClientConfig;
+use ApiSutra\Request\RequestOptions;
 use ApiSutra\Exceptions\Configuration\ConfigurationException;
 use ApiSutra\Exceptions\Testing\UnmockedRequestException;
 use ApiSutra\Laravel\Testing\TestingManager;
@@ -56,3 +57,22 @@ it('закрывает все сессии даже после нарушени�
     $manager->for($a)->fake([])->assertNothingSent();
     $manager->close();
 });
+
+it('принимает прогресс ядра в fake без уведомлений и сохраняет assertions', function (): void {
+    $manager = new TestingManager(new Container());
+    $client = new TestClient(new ClientConfig(baseUrl: 'https://test.example'), new MockTransport());
+    $manager->begin();
+    try {
+        $session = $manager->for($client)->fake([DiRequest::class => MockResponse::success(['ok' => true])]);
+        $calls = 0;
+        $request = (new DiRequest())->setClient($client)->withTransferProgress(
+            static function () use (&$calls): void {
+                ++$calls;
+            }
+        )->withRetryDelay(jitter: false);
+        expect($request->send()->raw()->isSuccess())->toBeTrue()->and($calls)->toBe(0);
+        $session->assertSent(DiRequest::class, times: 1);
+    } finally {
+        $manager->close();
+    }
+})->skip(!method_exists(RequestOptions::class, 'withTransferProgress'), 'Requires transfer progress in core');

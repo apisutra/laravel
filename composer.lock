@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f468d1cee757f75495f328a74c50cc7",
+    "content-hash": "dbee47867a9f96c08126be70865ffc0c",
     "packages": [
         {
             "name": "apisutra/php",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apisutra/php.git",
-                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446"
+                "reference": "15898e2db451270c22a8fa981a5b61cac135befe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apisutra/php/zipball/ebabb85b1c30225a0f6392978c464e61914f7446",
-                "reference": "ebabb85b1c30225a0f6392978c464e61914f7446",
+                "url": "https://api.github.com/repos/apisutra/php/zipball/15898e2db451270c22a8fa981a5b61cac135befe",
+                "reference": "15898e2db451270c22a8fa981a5b61cac135befe",
                 "shasum": ""
             },
             "require": {
@@ -65,9 +65,9 @@
             "description": "API Core SDK for declarative API clients",
             "support": {
                 "issues": "https://github.com/apisutra/php/issues",
-                "source": "https://github.com/apisutra/php/tree/v0.3.0"
+                "source": "https://github.com/apisutra/php/tree/v0.4.0"
             },
-            "time": "2026-09-27T10:25:11+00:00"
+            "time": "2026-10-01T11:46:29+00:00"
         },
         {
             "name": "brick/math",

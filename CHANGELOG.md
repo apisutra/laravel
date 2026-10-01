@@ -1,6 +1,13 @@
 <!-- languages --> <a href="CHANGELOG.md">English</a> · <a href="docs/ru/changelog.md">Русский</a> <!-- /languages -->
 # Changelog <a id="section-1"></a>
 
+## 0.1.3
+
+- Allow ApiSutra PHP 0.4 alongside 0.1, 0.2 and 0.3. Laravel integration APIs are unchanged.
+- Verify that Laravel fake accepts the core's transfer progress callback and per-call
+  retry delay options without emitting transfer notifications.
+- Update SDK installation checks for the PHP core 0.4 release.
+
 ## 0.1.2
 
 - Allow ApiSutra PHP 0.3 alongside 0.1 and 0.2. Laravel integration APIs are unchanged.
